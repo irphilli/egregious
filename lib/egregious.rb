@@ -16,7 +16,7 @@ module Egregious
 
   # Must sub out (Experimental) to avoid a class name: VariantAlsoNegotiates(Experimental)
   def self.clean_class_name(str)
-    str.gsub(/\s|-|'/,'').sub('(Experimental)','')
+    str.gsub(/\s|-|'/,'').sub('(Experimental)','').sub('(Unused)','Unused')
   end
 
   # use these exception to control the code you are throwing from you code
